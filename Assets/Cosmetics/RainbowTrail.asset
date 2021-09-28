@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa404c41fc281654cb318496935b19e6, type: 3}
+  m_Name: RainbowTrail
+  m_EditorClassIdentifier: 
+  type: 1
+  cosmeticName: Rainbow
+  price: 1000
+  skinImage: {fileID: 21300000, guid: 379df36acbdea7e4cbd2e5ea14fd6420, type: 3}
+  trailGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.52494174, b: 0, a: 1}
+    key2: {r: 0.9751804, g: 1, b: 0.11372548, a: 0.8784314}
+    key3: {r: 0.11012411, g: 1, b: 0, a: 0}
+    key4: {r: 0.011263847, g: 0, b: 1, a: 0}
+    key5: {r: 0.00838582, g: 0, b: 0.6792453, a: 0}
+    key6: {r: 0.21889271, g: 0.2146415, b: 0.576, a: 0}
+    key7: {r: 0.21960786, g: 0.21568629, b: 0.5764706, a: 0}
+    ctime0: 0
+    ctime1: 9252
+    ctime2: 18697
+    ctime3: 28527
+    ctime4: 37586
+    ctime5: 47802
+    ctime6: 56861
+    ctime7: 65535
+    atime0: 0
+    atime1: 56669
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 3
+  sceneBackground: {r: 0, g: 0, b: 0, a: 0}
+  sceneWalls: {r: 0, g: 0, b: 0, a: 0}
+  sceneEnimeies: {r: 0, g: 0, b: 0, a: 0}
