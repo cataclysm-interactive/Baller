@@ -24,7 +24,7 @@ variables:
   unity.projectPath:        '$(System.DefaultWorkingDirectory)/'
 
   # If you are using Unity 2019 or later, leave this alone!
-  unity.installComponents:  'Windows, UWP'
+  unity.installComponents:  'Windows, Android'
   # If you are using Unity 2018 or earlier, comment out the above and uncomment below:
   #  unity.installComponents:  'Windows, UWP_IL2CPP'
   # Explanation: In Unity 2019 and later, .NET scripting was removed. You no longer need to specify 'UWP_IL2CPP', it's now simply 'UWP'!
