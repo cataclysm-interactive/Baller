@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlueGreen
   m_EditorClassIdentifier: 
   type: 1
-  cosmeticName: Blue Green
+  cosmeticName: BlueGreen
   price: 500
   skinImage: {fileID: 21300000, guid: 09c33188d62d55c4d910c9811705747e, type: 3}
   trailGradient:

@@ -66,10 +66,8 @@ public class CosmeticObject : MonoBehaviour
             PlayerPrefs.SetInt(assignedCosmetic.name, 1);
             GameManager.instance.coins -= assignedCosmetic.price;
             buttonText.text = "Equip";
-
-            Debug.Log("Purchased " + assignedCosmetic.cosmeticName);
         }
-        else if(PlayerPrefs.GetInt(assignedCosmetic.cosmeticName) == 1)
+        if(PlayerPrefs.GetInt(assignedCosmetic.cosmeticName) == 1)
         {
             PlayerController.instance.EquipSkin(assignedCosmetic);
         }

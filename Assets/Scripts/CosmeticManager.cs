@@ -8,6 +8,7 @@ public class CosmeticManager : MonoBehaviour
 {
     public Cosmetic[] cosmetics;
     public GameObject cosmeticButtonPrefab;
+    public GameObject player;
     public Transform skinMenuContent;
     public Transform trailMenuContent;
     public TextMeshProUGUI coinText;
@@ -48,9 +49,7 @@ public class CosmeticManager : MonoBehaviour
     {
         foreach(Cosmetic cosmetic in cosmetics)
         {
-            Debug.LogWarning(cosmetic.name);
-
-            if(cosmetic.name == name)
+            if(cosmetic.cosmeticName == name)
             {
                 return cosmetic;
             }

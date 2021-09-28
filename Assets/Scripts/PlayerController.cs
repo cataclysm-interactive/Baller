@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public float thrust = 4f;
     public Rigidbody2D rb;
     public GameObject startMenu;
-    public string nameOfEquippedSkin;
     public SpriteRenderer image;
     public GameObject finger;
     Touch touch;
@@ -65,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
             touch = Input.GetTouch(0);
             Vector3 target = cam.ScreenToWorldPoint(touch.position);
+            target.y += 100;
             Vector2 targetDirection = target - transform.position;
             rb.AddForce(targetDirection, ForceMode2D.Impulse);
         }
@@ -79,12 +79,12 @@ public class PlayerController : MonoBehaviour
     {
         if(cosmetic.type == Cosmetic.TypeOfCosmetic.Skin)
         {
-            PlayerPrefs.SetString("Skin", cosmetic.name);
+            PlayerPrefs.SetString("Skin", cosmetic.cosmeticName);
             image.sprite = cosmetic.skinImage;
         }
-        else if(cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
+        if(cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
         {
-            PlayerPrefs.SetString("Trail", cosmetic.name);
+            PlayerPrefs.SetString("Trail", cosmetic.cosmeticName);
             GetComponent<TrailRenderer>().colorGradient = cosmetic.trailGradient;
         }
 
