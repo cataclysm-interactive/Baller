@@ -6,7 +6,7 @@ trigger:
 # that have the required Unity versions installed and any required SDKs for target platforms
 # configured.
 pool:
-  name: Unity Windows
+  name: default
 
 steps:
 # Before we build we activate a Unity Plus/Pro seat on the agent, only for the duration
