@@ -64,7 +64,10 @@ public class PlayerController : MonoBehaviour
 
             touch = Input.GetTouch(0);
             Vector3 target = cam.ScreenToWorldPoint(touch.position);
-            target.y += 100;
+            if(target.y < this.transform.position)
+            {
+                target.y = this.transform.position.y + 10;
+            }
             Vector2 targetDirection = target - transform.position;
             rb.AddForce(targetDirection, ForceMode2D.Impulse);
         }
