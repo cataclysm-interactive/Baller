@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -107981364, guid: 741884b37a0234d86bb740e55081cd5f, type: 3}
+  m_Name: UDP Settings
+  m_EditorClassIdentifier: 
+  UnityProjectID: ced8b7f3-7751-4ace-bc0b-84ffbcd26c92
+  UnityClientID: KIlqZx73IBz6Fj5h-s7fEA
+  UnityClientKey: JQIiBN-JuAhVms8e6Duz0yvtQvhXCn4Weah964z9UP8
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvg08TN1qgRNrZMg4X8Psa5yzPz0C2X/MnE0gpD9AX2+Fio2HtIct13ocSVeXYh6vQiWYWMjb8NBwzOXj4bFtal+5/g9i8pTTCvJunIQLn+SmbpxQ5gT98HVfV+R72u78uH3LR6IjIbXUGJeMDK8IHk3zvfgoe0RmLj6MW7Kp7EfeGwDfiBhlnYaJB3OkfSQxsesS1XDY2BWF/IoOdf2yF1F9LH4NAfSzxwBfz+HR7vab9pzu3WgA1AqCoy1RLiHRK05ngAZ6p/8QE0HUu1EtHsNPIG76noU4Z62u1Iozm6tn9io3QhCcocG36f7XutqMspFhiUcCzXFMZS9UMlhVeQIDAQAB
+  AppName: Baller
+  AppSlug: f9ecf7f7-b213-4a00-ab19-c72ef016d437
+  AppItemId: 5f55a574c608580020f66011
+  Permission: 

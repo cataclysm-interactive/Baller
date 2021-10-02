@@ -64,10 +64,6 @@ public class PlayerController : MonoBehaviour
 
             touch = Input.GetTouch(0);
             Vector3 target = cam.ScreenToWorldPoint(touch.position);
-            if(target.y < this.transform.position)
-            {
-                target.y = this.transform.position.y + 10;
-            }
             Vector2 targetDirection = target - transform.position;
             rb.AddForce(targetDirection, ForceMode2D.Impulse);
         }
@@ -89,6 +85,11 @@ public class PlayerController : MonoBehaviour
         {
             PlayerPrefs.SetString("Trail", cosmetic.cosmeticName);
             GetComponent<TrailRenderer>().colorGradient = cosmetic.trailGradient;
+        }
+        if(cosmetic.type == Cosmetic.TypeOfCosmetic.Scene)
+        {
+            PlayerPrefs.SetString("Scene", cosmetic.cosmeticName);
+            
         }
 
     }

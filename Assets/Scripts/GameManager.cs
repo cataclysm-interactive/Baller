@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
 
     string gameID = "3808217";
     string placementID = "freeCoins";
+    string indamiddleID = "video";
 
     #region GameManager
     private void Awake()
@@ -96,8 +97,14 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
                       }
                   });
             }
+            if(HighScore >= 25)
+            {
+                WatchMiddleAd();
+            }
             if(HighScore >= 50)
             {
+
+
                 Social.ReportProgress(GPGSIds.achievement_50_points, 100.0f, result =>
                 {
                     if (result == true)
@@ -164,6 +171,15 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
     #endregion
 
     #region Ads
+
+    public void WatchMiddleAd()
+    {
+        if(Advertisement.IsReady(indamiddleID))
+        {
+            Advertisement.Show(indamiddleID);
+        }
+    }
+
     public void WatchRewardedAd()
     {
         if(Advertisement.IsReady(placementID))
@@ -198,4 +214,11 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
     }
 
     #endregion
+
+
+    public void CoinsPurchaseComplete()
+    {
+        coins += 500;
+        PlayerPrefs.SetInt("Coins", coins);
+    }
 }

@@ -9,6 +9,9 @@ public class CosmeticObject : MonoBehaviour
     public GameObject skin;
     public GameObject trail;
     public GameObject scene;
+    public RawImage wall;
+    public RawImage background;
+    public RawImage obsticles;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI buttonText;
 
@@ -55,6 +58,25 @@ public class CosmeticObject : MonoBehaviour
                 skin.SetActive(false);
                 trail.SetActive(true);
                 scene.SetActive(false);
+                break;
+
+            case Cosmetic.TypeOfCosmetic.Scene:
+                nameText.text = cosmetic.cosmeticName;
+                if (PlayerPrefs.GetInt(assignedCosmetic.name) == 1)
+                {
+                    buttonText.text = "Equip";
+                }
+                else
+                {
+                    buttonText.text = cosmetic.price.ToString();
+                }
+                wall.color = cosmetic.sceneWalls;
+                background.color = cosmetic.sceneBackground;
+                obsticles.color = cosmetic.sceneObsticles;
+
+                skin.SetActive(false);
+                trail.SetActive(false);
+                scene.SetActive(true);
                 break;
         }
     }

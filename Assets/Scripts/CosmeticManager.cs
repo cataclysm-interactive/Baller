@@ -8,9 +8,9 @@ public class CosmeticManager : MonoBehaviour
 {
     public Cosmetic[] cosmetics;
     public GameObject cosmeticButtonPrefab;
-    public GameObject player;
     public Transform skinMenuContent;
     public Transform trailMenuContent;
+    public Transform sceneMenuContent;
     public TextMeshProUGUI coinText;
 
 
@@ -35,6 +35,11 @@ public class CosmeticManager : MonoBehaviour
             else if(cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
             {
                 CosmeticObject thing = Instantiate(cosmeticButtonPrefab, trailMenuContent).GetComponent<CosmeticObject>();
+                thing.DisplayCosmetic(cosmetic);
+            }
+            else if (cosmetic.type == Cosmetic.TypeOfCosmetic.Scene)
+            {
+                CosmeticObject thing = Instantiate(cosmeticButtonPrefab, sceneMenuContent).GetComponent<CosmeticObject>();
                 thing.DisplayCosmetic(cosmetic);
             }
         }

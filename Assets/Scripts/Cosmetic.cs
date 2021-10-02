@@ -28,5 +28,5 @@ public class Cosmetic : ScriptableObject
 
     public Color sceneBackground;
     public Color sceneWalls;
-    public Color sceneEnimeies;
+    public Color sceneObsticles;
 }
