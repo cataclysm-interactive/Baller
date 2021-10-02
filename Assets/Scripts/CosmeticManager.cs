@@ -6,6 +6,7 @@ using TMPro;
 
 public class CosmeticManager : MonoBehaviour
 {
+    public bool retreivalMode;
     public Cosmetic[] cosmetics;
     public GameObject cosmeticButtonPrefab;
     public Transform skinMenuContent;
@@ -25,22 +26,25 @@ public class CosmeticManager : MonoBehaviour
 
     public void Start()
     {
-        foreach(Cosmetic cosmetic in cosmetics)
+        if(retreivalMode == false)
         {
-            if(cosmetic.type == Cosmetic.TypeOfCosmetic.Skin)
+            foreach (Cosmetic cosmetic in cosmetics)
             {
-                CosmeticObject thing = Instantiate(cosmeticButtonPrefab, skinMenuContent).GetComponent<CosmeticObject>();
-                thing.DisplayCosmetic(cosmetic);
-            }
-            else if(cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
-            {
-                CosmeticObject thing = Instantiate(cosmeticButtonPrefab, trailMenuContent).GetComponent<CosmeticObject>();
-                thing.DisplayCosmetic(cosmetic);
-            }
-            else if (cosmetic.type == Cosmetic.TypeOfCosmetic.Scene)
-            {
-                CosmeticObject thing = Instantiate(cosmeticButtonPrefab, sceneMenuContent).GetComponent<CosmeticObject>();
-                thing.DisplayCosmetic(cosmetic);
+                if (cosmetic.type == Cosmetic.TypeOfCosmetic.Skin)
+                {
+                    CosmeticObject thing = Instantiate(cosmeticButtonPrefab, skinMenuContent).GetComponent<CosmeticObject>();
+                    thing.DisplayCosmetic(cosmetic);
+                }
+                else if (cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
+                {
+                    CosmeticObject thing = Instantiate(cosmeticButtonPrefab, trailMenuContent).GetComponent<CosmeticObject>();
+                    thing.DisplayCosmetic(cosmetic);
+                }
+                else if (cosmetic.type == Cosmetic.TypeOfCosmetic.Scene)
+                {
+                    CosmeticObject thing = Instantiate(cosmeticButtonPrefab, sceneMenuContent).GetComponent<CosmeticObject>();
+                    thing.DisplayCosmetic(cosmetic);
+                }
             }
         }
     }

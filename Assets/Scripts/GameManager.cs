@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
                       }
                   });
             }
-            if(HighScore >= 25)
+            if(score >= 25)
             {
                 WatchMiddleAd();
             }

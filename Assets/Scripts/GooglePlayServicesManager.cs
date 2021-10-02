@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-//using GooglePlayGames.BasicApi;
-//using GooglePlayGames;
+using GooglePlayGames.BasicApi;
+using GooglePlayGames;
 
 public class GooglePlayServicesManager : MonoBehaviour
 {
@@ -20,10 +20,13 @@ public class GooglePlayServicesManager : MonoBehaviour
     void Start()
     {
 
-        //PlayGamesClientConfiguration client = new PlayGamesClientConfiguration.Builder().Build();
-        //PlayGamesPlatform.InitializeInstance(client);
-        //PlayGamesPlatform.DebugLogEnabled = true;
-        //PlayGamesPlatform.Activate();
+        PlayGamesClientConfiguration client = new PlayGamesClientConfiguration.Builder().Build();
+        PlayGamesPlatform.InitializeInstance(client);
+        PlayGamesPlatform.DebugLogEnabled = false;
+        PlayGamesPlatform.Activate();
+
+        PlayerPrefs.SetString("Username", client.AccountName);
+        
 
         Social.localUser.Authenticate((result) =>
         {
