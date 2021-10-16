@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   cosmeticName: Gradient
-  price: 200
+  price: 500
   skinImage: {fileID: 21300000, guid: 09c33188d62d55c4d910c9811705747e, type: 3}
   trailGradient:
     serializedVersion: 2
@@ -47,4 +47,4 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   sceneBackground: {r: 0, g: 0, b: 0, a: 0}
   sceneWalls: {r: 0, g: 0, b: 0, a: 0}
-  sceneEnimeies: {r: 0, g: 0, b: 0, a: 0}
+  sceneObsticles: {r: 0, g: 0, b: 0, a: 0}

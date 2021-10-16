@@ -44,5 +44,15 @@ public class ClientSend : MonoBehaviour
         }
     }
 
+    public static void FinishedMatch(int score, int match)
+    {
+        using (Packet packet = new Packet((int) ClientPackets.gameFinished))
+        {
+            packet.Write(score);
+            packet.Write(match);
+            SendTCPData(packet);
+        }
+    }
+
     #endregion
 }

@@ -26,12 +26,13 @@ public class ClientHandle : MonoBehaviour
 
         if(match == 0)
         {
-            Debug.Log("No match made. No other users online");
+            Debug.LogWarning("No match made. No other users online");
+            MultiplayerManager.instance.NoMatch();
         }
 
         if(match > 0)
         {
-            Debug.Log("Match Found!!!" + match);
+            MultiplayerManager.instance.MatchFound(match);
         }
     }
 

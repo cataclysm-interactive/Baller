@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Microsoft.AppCenter.Unity.Analytics;
 
 public class CosmeticObject : MonoBehaviour
 {
@@ -83,13 +84,14 @@ public class CosmeticObject : MonoBehaviour
 
     public void GetCosmetic()
     {
-        if(PlayerPrefs.GetInt(assignedCosmetic.cosmeticName) == 0 && GameManager.instance.coins >= assignedCosmetic.price)
+        if(PlayerPrefs.GetInt(assignedCosmetic.name) == 0 && GameManager.instance.coins >= assignedCosmetic.price)
         {
             PlayerPrefs.SetInt(assignedCosmetic.name, 1);
             GameManager.instance.coins -= assignedCosmetic.price;
+            Analytics.TrackEvent("Purchased Cosmetic: " + assignedCosmetic.cosmeticName);
             buttonText.text = "Equip";
         }
-        if(PlayerPrefs.GetInt(assignedCosmetic.cosmeticName) == 1)
+        if(PlayerPrefs.GetInt(assignedCosmetic.name) == 1)
         {
             PlayerController.instance.EquipSkin(assignedCosmetic);
         }

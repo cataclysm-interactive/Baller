@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"076e7df6-e99c-4165-bc21-8519932db338\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"scoreBeforeAds\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 3\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"b802ae01-63a9-4c3a-94bd-70cd746280db\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"cosmetics\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"cosmeticName\": \"Test\"\r\n      }\r\n   
+    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"076e7df6-e99c-4165-bc21-8519932db338\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"scoreBeforeAds\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 3\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"b802ae01-63a9-4c3a-94bd-70cd746280db\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"cosmetics\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"cosmeticName\": \"Test\"\r\n      }\r\n   
+    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"ced8b7f3-7751-4ace-bc0b-84ffbcd26c92\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"49255951-aeb2-4a98-adbe-fec297dc8f74\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2021-08-16T07:25:46Z\",\r\n    \"updatedAt\":
+    \"2021-08-16T07:25:46Z\"\r\n  }\r\n]"
+  _rulesList: '[]'
+  _lastCachedRulesList: '[]'

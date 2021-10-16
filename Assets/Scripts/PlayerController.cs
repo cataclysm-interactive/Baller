@@ -9,9 +9,7 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public float thrust = 4f;
     public Rigidbody2D rb;
-    public GameObject startMenu;
     public SpriteRenderer image;
-    public GameObject finger;
     Touch touch;
 
     public static PlayerController instance;
@@ -78,17 +76,17 @@ public class PlayerController : MonoBehaviour
     {
         if(cosmetic.type == Cosmetic.TypeOfCosmetic.Skin)
         {
-            PlayerPrefs.SetString("Skin", cosmetic.cosmeticName);
+            PlayerPrefs.SetString("Skin", cosmetic.name);
             image.sprite = cosmetic.skinImage;
         }
         if(cosmetic.type == Cosmetic.TypeOfCosmetic.Trail)
         {
-            PlayerPrefs.SetString("Trail", cosmetic.cosmeticName);
+            PlayerPrefs.SetString("Trail", cosmetic.name);
             GetComponent<TrailRenderer>().colorGradient = cosmetic.trailGradient;
         }
         if(cosmetic.type == Cosmetic.TypeOfCosmetic.Scene)
         {
-            PlayerPrefs.SetString("Scene", cosmetic.cosmeticName);
+            PlayerPrefs.SetString("Scene", cosmetic.name);
             
         }
 

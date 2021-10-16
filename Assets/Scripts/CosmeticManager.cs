@@ -58,7 +58,7 @@ public class CosmeticManager : MonoBehaviour
     {
         foreach(Cosmetic cosmetic in cosmetics)
         {
-            if(cosmetic.cosmeticName == name)
+            if(cosmetic.name == name)
             {
                 return cosmetic;
             }

@@ -299,7 +299,7 @@ public class Client : MonoBehaviour
     }
 
     /// <summary>Disconnects from the server and stops all network traffic.</summary>
-    private void Disconnect()
+    public void Disconnect()
     {
         if (isConnected)
         {

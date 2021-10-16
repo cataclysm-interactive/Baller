@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.RemoteConfig;
 
 
 public class GameManager : MonoBehaviour , IUnityAdsListener
@@ -28,11 +29,13 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
 
     string gameID = "3808217";
     string placementID = "freeCoins";
-    string indamiddleID = "video";
+
+    int scoreBeforeAd;
 
     #region GameManager
     private void Awake()
     {
+
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameID);
         if (instance != null) { Destroy(gameObject); return; }
@@ -66,6 +69,8 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
 
             deathScreen.SetActive(true);
 
+            DeathCounter.instance.deaths++;
+
             if(score > HighScore)
             {
                 HighScore = score;
@@ -97,10 +102,7 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
                       }
                   });
             }
-            if(score >= 25)
-            {
-                WatchMiddleAd();
-            }
+
             if(HighScore >= 50)
             {
 
@@ -134,7 +136,7 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
                 });
             }
 
-            coins = coins + score;
+            coins = coins + score / 2;
 
             Social.ReportScore(coins, GPGSIds.leaderboard_coins, result =>
             {
@@ -142,8 +144,6 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
         }
 
         PlayerPrefs.SetInt("Coins", coins);
-
-
     }
 
     public void Retry()
@@ -171,14 +171,6 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
     #endregion
 
     #region Ads
-
-    public void WatchMiddleAd()
-    {
-        if(Advertisement.IsReady(indamiddleID))
-        {
-            Advertisement.Show(indamiddleID);
-        }
-    }
 
     public void WatchRewardedAd()
     {
@@ -216,9 +208,25 @@ public class GameManager : MonoBehaviour , IUnityAdsListener
     #endregion
 
 
-    public void CoinsPurchaseComplete()
+    public void OpenInsta()
+    {
+        Application.OpenURL("");
+    }
+
+    public void RemoveAds()
+    {
+        PlayerPrefs.SetInt("Ads", 1);
+    }
+
+    public void Coins500()
     {
         coins += 500;
+        PlayerPrefs.SetInt("Coins", coins);
+    }
+
+    public void Coins5000()
+    {
+        coins += 5000;
         PlayerPrefs.SetInt("Coins", coins);
     }
 }
